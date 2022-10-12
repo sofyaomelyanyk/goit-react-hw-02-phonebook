@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import s from './Filter.module.css'
 
 export const Filter = ({filter, changeFilter}) => {
 
    return(
-      <label>
-      <span>Find contacts by name</span>
-      <input type="text" value={filter} onChange={changeFilter} />
+      <label className={s["input-group"]}>
+      <span >Find contacts by name:</span>
+      <input type="text" value={filter} onChange={changeFilter} className={s["input"]} />
       </label>
    )
 }
