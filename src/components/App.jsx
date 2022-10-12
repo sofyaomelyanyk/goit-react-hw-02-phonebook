@@ -24,13 +24,13 @@ export class App extends Component {
         id: nanoid(),
       }
 
+      if (this.state.contacts.some(({name}) => name === newContact.name)) {
+         return alert(`${newContact.name} is already in contacts.`)
+       }
+
       this.setState(({contacts}) => ({
          contacts: [newContact, ...contacts]
        }))
-
-       if (this.state.contacts.some(({name}) => name === newContact.name)) {
-         return alert(`${newContact.name} is already in contacts.`)
-       }
 
     }
 
