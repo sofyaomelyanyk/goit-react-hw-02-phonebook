@@ -27,6 +27,7 @@
   background: rgb(44, 142, 91);
   box-shadow: 0 -3px rgb(36, 104, 70) inset;
   transform: scale(1);
+  cursor: pointer;
 }
 
 .button:hover {
